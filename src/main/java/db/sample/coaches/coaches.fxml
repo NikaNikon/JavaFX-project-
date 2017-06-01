@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Pane layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="700.0">
+      <children>
+        <TableView focusTraversable="false" layoutX="14.0" layoutY="33.0" prefHeight="542.0" prefWidth="672.0">
+          <columns>
+            <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="244.0" resizable="true" sortable="false" text="Тренер" fx:id="tbl_group" />
+            <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="428.0" resizable="true" sortable="false" text="Информация" fx:id="tbl_coach" />
+          </columns>
+        </TableView>
+      </children>
+    </Pane>
+    <ScrollBar layoutX="554.0" layoutY="74.0" orientation="VERTICAL" prefHeight="459.9999000000025" visible="false" />
+  </children>
+</AnchorPane>

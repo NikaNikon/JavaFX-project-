@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db.sample.registration.RegController">
+  <children>
+      <Pane fx:id="pane" prefHeight="500.0" prefWidth="600.0" visible="true">
+         <children>
+          <GridPane layoutX="84.0" layoutY="36.0" prefHeight="399.0" prefWidth="432.0">
+            <children>
+              <Label id="lblName" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="168.0" text="Имя*" textAlignment="CENTER" underline="false" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <font>
+                  <Font name="Calibri Italic" size="15.0" fx:id="x1" />
+                </font>
+                <textFill>
+                  <Color blue="0.389" green="0.000" red="0.000" fx:id="x2" />
+                </textFill>
+              </Label>
+              <Label id="lblLastName" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="22.0" prefWidth="168.0" text="Фамилия*" textFill="$x2" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+              <Label id="lblLogin" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="22.0" prefWidth="168.0" text="Логин*" textFill="$x2" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+              <Label id="lblPass" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="21.0" prefWidth="168.0" text="Пароль*" textFill="$x2" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+              <TextField id="txtFieldName" fx:id="txtFieldName" alignment="CENTER_LEFT" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" promptText="" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <GridPane.margin>
+                  <Insets left="30.0" fx:id="x3" />
+                </GridPane.margin>
+              </TextField>
+              <TextField id="txtFieldLastName" fx:id="txtFieldLastName" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" GridPane.columnIndex="1" GridPane.margin="$x3" GridPane.rowIndex="1" />
+              <TextField id="txtFieldLogin" fx:id="txtFieldLogin" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" GridPane.columnIndex="1" GridPane.margin="$x3" GridPane.rowIndex="2" />
+                  <PasswordField fx:id="passFieldPass" layoutX="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </PasswordField>
+                  <Label text="Должен содержать не менее 6 символов" textFill="#bdbdbdc0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Cambria Italic" size="11.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="45.0" top="40.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="14.0" prefWidth="349.0" text="Должен содержать не менее 7 символов, заглавные буквы и цифры" textFill="#bdbdbdc0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Cambria Italic" size="11.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label id="lblPass" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="21.0" prefWidth="168.0" text="База данных" textFill="$x2" GridPane.rowIndex="7" />
+                  <RadioButton fx:id="mySqlBtn" alignment="BOTTOM_LEFT" mnemonicParsing="false" selected="true" text="MySQL" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="database" />
+                     </toggleGroup>
+                     <GridPane.margin>
+                        <Insets left="32.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="mongoDbBtn" alignment="CENTER_LEFT" mnemonicParsing="false" text="MongoDB" toggleGroup="$database" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+                  <Label id="lblPass" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="21.0" prefWidth="168.0" text="Телефон" textFill="$x2" GridPane.rowIndex="5" />
+                  <Label id="lblPass" alignment="CENTER_RIGHT" contentDisplay="CENTER" font="$x1" prefHeight="21.0" prefWidth="168.0" text="E-mail" textFill="$x2" GridPane.rowIndex="6" />
+                  <TextField id="txtFieldLastName" fx:id="emailField" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField id="txtFieldLastName" fx:id="phoneField" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="230.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <RadioButton fx:id="hibernateBtn" alignment="CENTER_LEFT" layoutX="202.0" layoutY="362.0" mnemonicParsing="false" text="MySQLHibernate" toggleGroup="$database" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="190.0" />
+                     </GridPane.margin>
+                  </RadioButton>
+            </children>
+            <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="62.0" />
+              <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="340.0" />
+            </columnConstraints>
+            <rowConstraints>
+              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="40.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="80.0" vgrow="SOMETIMES" />
+              <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="1.0" prefHeight="60.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+          </GridPane>
+          <Button contentDisplay="CENTER" layoutX="202.0" layoutY="435.0" mnemonicParsing="false" onAction="#onOkClicked" prefHeight="35.0" prefWidth="196.0" text="Зарегистрироваться" textAlignment="CENTER" textFill="#190f3cf8">
+            <font>
+              <Font name="Calibri" size="18.0" />
+            </font>
+          </Button>
+            <Label fx:id="errorLabel" layoutX="184.0" layoutY="19.0" text="Проверьте правильность введенных данных" textFill="RED" visible="false">
+               <font>
+                  <Font name="Calibri Light Italic" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="successRegPane" layoutX="127.0" layoutY="115.0" prefHeight="171.0" prefWidth="347.0" style="-fx-border-width: 1.5px; -fx-padding: 10; -fx-spacing: 8; -fx-border-color: #999999; -fx-background-color: #8ED2A4;" visible="false">
+         <children>
+            <Button fx:id="okBtn" layoutX="119.0" layoutY="108.0" mnemonicParsing="false" onAction="#onOkBtnClicked" prefHeight="35.0" prefWidth="109.0" text="OK" />
+            <Label layoutX="35.0" layoutY="44.0" text="Вы успешно зарегистрированы.">
+               <font>
+                  <Font name="Cambria Math" size="19.0" />
+               </font>
+            </Label>
+         </children></Pane>
+  </children>
+  <effect>
+    <InnerShadow height="6.888888888888889" radius="2.9444444444444446" width="6.888888888888889" />
+  </effect>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

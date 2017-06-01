@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db.sample.groups.GroupsController">
+  <children>
+    <Pane fx:id="groups" prefHeight="699.0" prefWidth="900.0" visible="true">
+      <children>
+        <Button layoutX="714.0" layoutY="655.0" mnemonicParsing="false" onAction="#onAddGroupBtnClicked" prefHeight="26.0" prefWidth="115.99990000000253" text="Добавить группу" />
+        <TextField id="searchingStyle" fx:id="txtFieldStyle" layoutX="588.0" layoutY="32.0" prefHeight="26.0" prefWidth="200.0" />
+        <Label layoutX="386.0" layoutY="37.0" text="Поиск" />
+        <Button layoutX="797.0" layoutY="32.0" mnemonicParsing="false" onAction="#onSearchBtnClicked" prefHeight="26.0" prefWidth="61.0" text="Искать" />
+        <ListView fx:id="groupsList" layoutX="54.0" layoutY="76.0" prefHeight="563.0" prefWidth="794.0">
+          <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="optionEdit" mnemonicParsing="false" onAction="#onEditClicked" text="Редактировать расписание" />
+                <MenuItem fx:id="optionDelete" mnemonicParsing="false" onAction="#onDeleteClicked" text="Удалить группу" />
+              </items>
+            </ContextMenu>
+          </contextMenu>
+        </ListView>
+            <ChoiceBox fx:id="searchOptions" layoutX="424.0" layoutY="33.0" prefWidth="150.0" />
+            <Label layoutX="45.0" layoutY="38.0" text="Сортировка" />
+            <ChoiceBox fx:id="sortOptions" layoutX="115.0" layoutY="34.0" prefWidth="150.0" />
+            <Button fx:id="sortBtn" layoutX="272.0" layoutY="33.0" mnemonicParsing="false" onAction="#sort" text="Сортировать" />
+            <TextArea fx:id="msgField" editable="false" layoutX="54.0" layoutY="646.0" prefHeight="35.0" prefWidth="637.0" />
+      </children>
+    </Pane>
+    <Pane fx:id="newGroup" layoutX="0.0" layoutY="0.0" prefHeight="600.0" prefWidth="600.0" visible="false">
+      <children>
+        <TextField fx:id="setStyle" layoutX="173.0" layoutY="88.0" prefWidth="255.0" promptText="Стиль" />
+        <TextField fx:id="setCoachName" layoutX="173.0" layoutY="195.0" prefWidth="255.0" promptText="Имя тренера" />
+        <TextField fx:id="setSchedule" layoutX="173.0" layoutY="300.0" prefWidth="255.0" promptText="Расписание" />
+        <Button layoutX="250.0" layoutY="365.0" mnemonicParsing="false" onAction="#onOKClicked" prefHeight="34.9609375" prefWidth="101.0" text="OK" />
+        <TextField fx:id="setCoachLastName" layoutX="173.0" layoutY="249.0" prefWidth="255.0" promptText="Фамилия тренера" />
+        <TextField fx:id="setLevel" layoutX="173.0" layoutY="140.0" prefWidth="255.0" promptText="Уровень (1-3)" />
+      </children>
+    </Pane>
+    <Pane id="editGroup" fx:id="editGroupPane" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="600.0" visible="false">
+      <children>
+        <TextField id="setStyle" fx:id="styleField" editable="false" layoutX="173.0" layoutY="88.0" prefWidth="255.0" promptText="Стиль" />
+        <TextField id="setCoachName" fx:id="coachNameField" editable="false" layoutX="173.0" layoutY="195.0" prefWidth="255.0" promptText="Имя тренера" />
+        <TextField id="setSchedule" fx:id="scheduleField" layoutX="173.0" layoutY="300.0" prefWidth="255.0" promptText="Расписание" />
+        <Button fx:id="edit" layoutX="250.0" layoutY="365.0" mnemonicParsing="false" onAction="#onOKEditClicked" prefHeight="34.9609375" prefWidth="101.0" text="OK" />
+        <TextField id="setCoachLastName" fx:id="coachLastNameField" editable="false" layoutX="173.0" layoutY="249.0" prefWidth="255.0" promptText="Фамилия тренера" />
+        <TextField id="setLevel" fx:id="levelField" editable="false" layoutX="173.0" layoutY="140.0" prefWidth="255.0" promptText="Уровень (1-3)" />
+      </children>
+    </Pane>
+    <Pane fx:id="deletePane" layoutX="177.0" layoutY="209.0" prefHeight="182.00009999999747" prefWidth="347.0" style="-fx-border-color: #999999;&#10;    -fx-border-width: 1.5px;&#10;    -fx-padding: 10;&#10;    -fx-spacing: 8;" visible="false">
+      <children>
+        <Label layoutX="16.0" layoutY="51.0" text="Вы уверены, что хотите удалить группу?" textAlignment="CENTER">
+          <font>
+            <Font name="Cambria" size="17.0" />
+          </font>
+        </Label>
+        <Button fx:id="deleteBtn" layoutX="71.0" layoutY="116.0" mnemonicParsing="false" onAction="#onDeleteBtnClicked" prefHeight="30.9609375" prefWidth="89.0" text="Удалить" />
+        <Button fx:id="cancelBtn" layoutX="200.0" layoutY="116.0" mnemonicParsing="false" onAction="#onCancelBtnClicked" prefHeight="30.9609375" prefWidth="89.0" text="Отмена" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

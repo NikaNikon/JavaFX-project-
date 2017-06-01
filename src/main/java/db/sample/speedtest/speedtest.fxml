@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="db.sample.speedtest.SpeedTestController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="usersAmount" layoutX="228.0" layoutY="47.0" opacity="0.46" text="Количевство записей" />
+            <Button fx:id="mySQLBtn" layoutX="88.0" layoutY="108.0" mnemonicParsing="false" onAction="#addToMySQL" prefHeight="35.0" prefWidth="126.0" text="Добавить в mySQL" />
+            <Label fx:id="mongoRezult" alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="181.0" prefHeight="147.0" prefWidth="254.0">
+               <font>
+                  <Font size="33.0" />
+               </font></Label>
+            <Label fx:id="mySqlRezult" alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="181.0" prefHeight="147.0" prefWidth="254.0">
+               <font>
+                  <Font size="33.0" />
+               </font></Label>
+            <Button fx:id="mongoBtn" layoutX="384.0" layoutY="109.0" mnemonicParsing="false" onAction="#addToMongo" prefHeight="35.0" prefWidth="126.0" text="Добавить в mongoDB" />
+            <Separator layoutX="297.0" layoutY="126.0" orientation="VERTICAL" prefHeight="256.0" prefWidth="7.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

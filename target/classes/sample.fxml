@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="db.sample.main.Controller">
+    <children>
+        <Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="599.9999000000025" style="-fx-background-color: #515F94;">
+            <children>
+            <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.46">
+               <image>
+                  <Image url="@mainBG.jpg" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="speedTestBtn" layoutX="519.0" layoutY="359.0" onAction="#onClickedSpeedBtn" text="Speedtest" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+                  <Button fx:id="btnRegistration" contentDisplay="CENTER" defaultButton="false" graphicTextGap="4.0" layoutX="218.0" layoutY="105.0" maxHeight="-1.0" minHeight="-1.0" mnemonicParsing="false" onAction="#onClickedRegistration" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #030930;" text="New Student" textAlignment="CENTER" textFill="#eeeeee" textOverrun="CLIP" underline="false" wrapText="false">
+                      <font>
+                          <Font name="Arial Rounded MT Bold" size="20.0" fx:id="x1" />
+                      </font>
+                  </Button>
+                  <Button fx:id="btnGroups" contentDisplay="CENTER" defaultButton="false" graphicTextGap="4.0" layoutX="218.0" layoutY="239.0" maxHeight="-1.0" minHeight="-1.0" mnemonicParsing="false" onAction="#onClickedGroups" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: #030930;" text="Groups" textAlignment="CENTER" textFill="#eeeeee" textOverrun="CLIP" underline="false" wrapText="false">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font></Button>
+                  <Button fx:id="btnCoaches" alignment="CENTER" contentDisplay="CENTER" defaultButton="false" graphicTextGap="4.0" layoutX="218.0" layoutY="172.0" maxHeight="-1.0" minHeight="-1.0" mnemonicParsing="false" onAction="#onClickedCoaches" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: #030930;" text="Coaches" textAlignment="CENTER" textFill="#eeeeee" textOverrun="CLIP" underline="false" wrapText="false">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font></Button>
+            <Pane prefHeight="79.0" prefWidth="600.0" style="-fx-background-color: #030930;">
+               <children>
+                  <Label layoutX="144.0" layoutY="19.0" text="Dance Town        21" textFill="#f2eeee">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="369.0" layoutY="20.0" text="UA" textFill="#2dc7ff">
+                     <font>
+                        <Font name="Arial Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button fx:id="btnCards" alignment="CENTER" contentDisplay="CENTER" defaultButton="false" graphicTextGap="4.0" layoutX="218.0" layoutY="304.0" maxHeight="-1.0" minHeight="-1.0" mnemonicParsing="false" onAction="#onClickedCoaches" prefHeight="44.0" prefWidth="164.0" style="-fx-background-color: #030930;" text="Cards" textAlignment="CENTER" textFill="#eeeeee" textOverrun="CLIP" underline="false" wrapText="false">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Button>
+            <Hyperlink fx:id="migrateToMongo" layoutX="17.0" layoutY="346.0" onAction="#onMigrateToMongoClicked" text="Migration to mongo" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="migrateToMySQL" layoutX="17.0" layoutY="373.0" onAction="#onMigrateToMySQLClicked" text="Migration to MySQL" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Hyperlink>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
